@@ -1,0 +1,9 @@
+---
+applications:
+- name: fdcdemo
+  memory: 512M 
+  instances: 1
+  host: fdcdemo-${random-word}
+  path: ./target/fdcdemo.war
+  env:
+   JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
